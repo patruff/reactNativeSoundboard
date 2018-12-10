@@ -9,8 +9,10 @@ export default class App extends React.Component {
         <Text style={styles.heading}>Juju & Zac's {"\n"}Epic Soundboard!</Text>
         <View style={styles.wrapper}>
           <SoundButton emojiName='man' onPress={() => this.playSound('this_is_a_sound')}></SoundButton>
-          <SoundButton emojiName='smiley' onPress={() => this.playSound('burrito')}></SoundButton>
+          <SoundButton emojiName='burrito' onPress={() => this.playSound('burrito')}></SoundButton>
           <SoundButton emojiName='woman' onPress={() => this.playSound('vegang')}></SoundButton>
+          <SoundButton emojiName='grey_question' onPress={() => this.playSound('question_mark')}></SoundButton>
+          <SoundButton emojiName='laughing' onPress={() => this.playSound('laughing')}></SoundButton>
         </View>
       </View>
     );
@@ -33,6 +35,8 @@ const sounds = {
   'this_is_a_sound': require('./assets/this_is_a_sound.m4a'),
   'burrito': require('./assets/burrito.m4a'),
   'vegang': require('./assets/vegang.m4a'),
+  'question_mark': require('./assets/question_mark.m4a'),
+  'laughing': require('./assets/laughing.m4a'),
 };
 
 const styles = StyleSheet.create({
