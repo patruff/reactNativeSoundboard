@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity, StyleSheet } from 'react-native'
+import {TouchableOpacity, StyleSheet, Text} from 'react-native'
 import Emoji from 'react-native-emoji';
 
 class soundButton extends Component {
@@ -8,6 +8,7 @@ class soundButton extends Component {
     const { emojiName, onPress } = this.props;
     return (
       <TouchableOpacity style={styles.buttonStyle} onPress={() => onPress()}>
+        <Text style={styles.heading}>{emojiName}</Text>
         <Emoji name={emojiName} style={{fontSize:30}} />
       </TouchableOpacity>
     );

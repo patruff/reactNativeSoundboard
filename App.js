@@ -1,15 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import SoundButton from './components/soundbutton';
+import * as Expo from 'expo';
+import { Audio } from 'expo-av';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.heading}>Juju & Zac's {"\n"}Epic Soundboard!</Text>
+        <Text style={styles.heading}>Joe The Bachelor's {"\n"}Epic Soundboard!</Text>
         <View style={styles.wrapper}>
           <SoundButton emojiName='man' onPress={() => this.playSound('this_is_a_sound')}></SoundButton>
-          <SoundButton emojiName='burrito' onPress={() => this.playSound('burrito')}></SoundButton>
+          <SoundButton emojiName='woman' onPress={() => this.playSound('this_is_a_sound')}></SoundButton>
+          <SoundButton emojiName='woman' onPress={() => this.playSound('this_is_a_sound')}></SoundButton>
+          <SoundButton emojiName='woman' onPress={() => this.playSound('this_is_a_sound')}></SoundButton>
+          <SoundButton emojiName='woman' onPress={() => this.playSound('this_is_a_sound')}></SoundButton>
+          <SoundButton emojiName='woman' onPress={() => this.playSound('this_is_a_sound')}></SoundButton>
+          <SoundButton emojiName='woman' onPress={() => this.playSound('this_is_a_sound')}></SoundButton>
+          <SoundButton emojiName='woman' onPress={() => this.playSound('this_is_a_sound')}></SoundButton>
+          <SoundButton emojiName='woman' onPress={() => this.playSound('this_is_a_sound')}></SoundButton>
+          <SoundButton emojiName='woman' onPress={() => this.playSound('this_is_a_sound')}></SoundButton>
+          <SoundButton emojiName='man' onPress={() => this.playSound('burrito')}></SoundButton>
           <SoundButton emojiName='woman' onPress={() => this.playSound('vegang')}></SoundButton>
           <SoundButton emojiName='grey_question' onPress={() => this.playSound('question_mark')}></SoundButton>
           <SoundButton emojiName='laughing' onPress={() => this.playSound('laughing')}></SoundButton>
@@ -20,7 +31,7 @@ export default class App extends React.Component {
 
   playSound = async (soundName) => {
     console.log(`playSound: ${soundName}`);
-    const soundObject = new Expo.Audio.Sound();
+    const soundObject = new Audio.Sound()
     try {
       await soundObject.loadAsync(sounds[soundName]);
       await soundObject.playAsync();
@@ -48,6 +59,7 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     flexDirection: 'row',
+    flexWrap: "wrap"
   },
   heading: {
     textAlignVertical: 'top',
