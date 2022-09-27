@@ -9,7 +9,7 @@ class soundButton extends Component {
     return (
       <TouchableOpacity style={styles.buttonStyle} onPress={() => onPress()}>
         <Text style={styles.heading}>{emojiName}</Text>
-        <Emoji name={emojiName} style={{fontSize:30}} />
+        <Emoji name="man" style={{fontSize:30}} />
       </TouchableOpacity>
     );
   }
