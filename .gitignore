@@ -8,3 +8,4 @@ npm-debug.*
 .idea
 .idea/**
 *.idea*
+.DS_Store
